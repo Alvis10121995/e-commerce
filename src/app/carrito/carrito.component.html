@@ -1,0 +1,13 @@
+<section class="bg-gray-800 w-fit text-white "> 
+<h2> Carritos </h2>
+<p> Listado de productos</p>
+ @for (item of this.serviciocar.carro; track $index) {
+    <p>  {{item.id}} {{item.title}} {{item.price}} <button (click)="eliminar(item.id)" class="bg-red-800 text-white" > delete </button> <p>
+
+ }@empty {
+    <p> Carrito vacio</p>
+    }
+<p> Total {{   this.serviciocar.total.toFixed(2)}} </p>
+
+</section>
+
